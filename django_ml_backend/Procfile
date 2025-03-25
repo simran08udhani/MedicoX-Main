@@ -1,0 +1,1 @@
+web: gunicorn django_ml_backend.wsgi:application
