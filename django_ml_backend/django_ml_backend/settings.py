@@ -124,6 +124,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,8 +135,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-key-if-not-set')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key-if-not-set')
+# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-&ynwwfbu43rz%@cmc05=slz%ea_1&rh!ao#y2f$a&$qo8=&usk")
+DEBUG = False
+
 
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
@@ -186,13 +191,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_ml_backend.wsgi.application'
 
 # Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+}
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
