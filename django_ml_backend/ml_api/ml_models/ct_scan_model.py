@@ -173,8 +173,8 @@ class CTScanModel:
             
             # Provide appropriate medical guidance based on predicted class
             guidance = {
-                "Benign Lung Cancer": "Benign lung nodules detected. While generally not life-threatening, follow-up monitoring is recommended.",
-                "Malignant Lung Cancer": "Potential malignant indicators detected. Immediate consultation with an oncologist is highly recommended.",
+                "Benign Lung Cancer": "Benign lung nodules detected.",
+                "Malignant Lung Cancer": "Potential malignant indicators detected.",
                 "Normal": "No significant abnormalities detected in the lung CT scan."
             }
             
@@ -192,20 +192,20 @@ class CTScanModel:
             }
             
             result = {
-                "prediction_scores": predictions.tolist(),
-                "predicted_class": predicted_class,
+                #"prediction_scores": predictions.tolist(),
+                #"predicted_class": predicted_class,
                 "confidence": confidence,
-                "image_data": img_str,
+                #"image_data": img_str,
                 "probability_chart": plot_str,
                 "medical_guidance": guidance[predicted_class],
                 "severity_level": severity[predicted_class],
                 "model_metrics": model_metrics,
-                "recommendation": "This is an AI-assisted analysis and should be confirmed by a medical professional. Please consult with a pulmonologist or oncologist to discuss these findings.",
+                #"recommendation": "This is an AI-assisted analysis and should be confirmed by a medical professional. Please consult with a pulmonologist or oncologist to discuss these findings.",
                 "next_steps": [
                     "Consult with a pulmonologist to review these results",
                     "Schedule additional diagnostic tests if recommended",
-                    "Discuss treatment options if applicable",
-                    "Consider follow-up scans to monitor any changes"
+                    #"Discuss treatment options if applicable",
+                    #"Consider follow-up scans to monitor any changes"
                 ]
             }
             
