@@ -1,0 +1,634 @@
+/* Container Styling */
+body {
+  background-color: #d8e5e1;
+}
+
+body.dark {
+  background-color: #02363d;
+}
+
+.upload-container {
+  text-align: center;
+  padding: 20px;
+  background: #d8e5e1;
+  color: white;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dark .upload-container {
+  background-color: #02363d;
+}
+
+/* Scan Uploader Section */
+.scan-uploader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed white;
+  background: #176f6f;
+  margin: 30px auto;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1000px;
+  height: 350px;
+  position: relative;
+}
+
+.dark .scan-uploader {
+  background-color: #c6dad4;
+  color: black;
+}
+
+.scan-type {
+  flex: 1;
+  padding: 20px;
+  margin-bottom: 45px;
+}
+
+.scan-type h3 {
+  display: flex;
+  font-size: 1.5em;
+  gap: 3px;
+  text-align: start;
+}
+
+.upload-section {
+  flex: 3;
+  padding: 20px;
+  text-align: center;
+}
+
+.divider {
+  width: 2px;
+  height: 350px;
+  background: white;
+  margin: 0 20px;
+}
+
+.dark .divider {
+  background-color: black;
+}
+
+/* Import File Button */
+.import-btn,
+.upload-btn,
+button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff7d6;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 300px;
+  margin: 15px auto;
+  justify-content: center;
+}
+
+.dark .import-btn,
+.dark .upload-btn,
+.dark button {
+  background-color: #176f6f;
+  color: white;
+}
+
+.import-btn:hover,
+.upload-btn:hover,
+button:hover {
+  background: #f4e4a6;
+}
+
+.dark .import-btn:hover,
+.dark .upload-btn:hover,
+.dark button:hover {
+  background: #219f9f;
+}
+
+/* Upload Button Outside Box */
+/* Upload Button - Positioned Below Import Button */
+.upload-btn,
+button {
+  font-size: 15px;
+}
+
+/* Form, Disclaimer & Result Section */
+.form-container,
+.disclaimer,
+.result-container {
+  margin: 30px auto;
+  padding: 20px;
+  background: #176f6f;
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1000px;
+  min-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark .form-container,
+.dark .disclaimer,
+.dark .result-container {
+  background-color: #c6dad4;
+  color: black;
+}
+
+.form-container {
+  text-align: start;
+}
+
+.patient-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.patient-form > div > label {
+  display: block;
+  font-weight: 600;
+}
+
+/* Input Fields and Buttons */
+
+input,
+select {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 94.2%;
+}
+
+input::placeholder {
+  color: #999; /* Change this to your desired color */
+}
+
+.form-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Scan Image */
+.scan-image {
+  width: 50%;
+  margin-top: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 80%;
+  max-width: 1000px;
+  background: #02363d;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.dark .progress-bar {
+  background-color: #d8e5e1;
+}
+
+.progress {
+  height: 100%;
+  background: rgb(54, 197, 186);
+  text-align: center;
+  color: white;
+  line-height: 20px;
+}
+.upload-btn-container {
+  position: relative;
+  text-align: center;
+}
+
+.tooltip {
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.scan-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding-left: 13px;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  max-width: 150px;
+  margin: auto;
+}
+
+.or hr {
+  flex: 1;
+}
+
+.dark .or hr {
+  border-color: black;
+}
+
+input[type="radio"] {
+  margin: 0;
+  display: inline;
+  width: auto;
+  accent-color: #fff7d6;
+}
+
+input[type="checkbox"] {
+  accent-color: black;
+}
+
+.dark input[type="radio"],
+.dark input[type="checkbox"] {
+  accent-color: #176f6f;
+}
+
+.radio-tooltip {
+  background-color: #fff7d6 !important;
+  color: black !important;
+}
+
+.dark .radio-tooltip {
+  background-color: #176f6f !important;
+  color: white !important;
+}
+
+.disclaimer {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.disclaimer-form {
+  display: flex;
+  align-items: start;
+  font-size: 18.72px;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 5px;
+}
+
+.disclaimer-form input {
+  max-width: fit-content;
+  margin: 0;
+  margin-top: 5px;
+}
+
+/*
+Earlier code
+.result-container {
+  display: flex;
+  gap: 20px;
+}
+
+.result-container .left {
+  max-width: 50%;
+}
+
+.result-container .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  padding-top: 14px;
+}
+
+.result-container .left img {
+  /* width: 503px;
+  height: 503px; */
+/*
+  width: 335px;
+  height: 335px;
+  object-fit: cover;
+}
+*/ /*
+.result-container .patient-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 5px;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.result-container .right h2 {
+  margin-bottom: 10px;
+}
+
+.result-container .patient-info p {
+  outline: 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: fit-content;
+}
+
+.result-container .report {
+  flex: 1;
+  outline: 2px solid;
+  margin: 0 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+}
+
+Earlier code
+*/
+
+.result-container {
+  display: flex;
+  gap: 20px;
+}
+
+.result-container .left {
+  max-width: 50%;
+}
+
+.result-container .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  padding-top: 14px;
+}
+
+.result-container .left img {
+  width: 335px;
+  height: 335px;
+  object-fit: cover;
+}
+
+.result-container .patient-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 5px;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.result-container .right h2 {
+  margin-bottom: 10px;
+}
+
+.result-container .patient-info p {
+  outline: 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: fit-content;
+}
+
+/* .result-container .report {
+  flex: 1;
+  outline: 2px solid;
+  margin: 0 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  
+  /* **New Scrollable Report Section** */
+/*max-height: 400px; /* Adjust as needed */
+/*overflow-y: auto;
+  overflow-x: auto;
+  padding: 10px; /* Optional: To add spacing */
+/*} */
+
+.result-container .report {
+  flex: 1;
+  outline: 2px solid;
+  margin: 0 14px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  max-height: 333px; /* Restricts height */
+  max-width: 620px;
+  overflow-y: auto; /* Enables scrolling */
+  overflow-x: auto; /* Prevents horizontal overflow */
+  padding: 10px; /* Adds spacing for readability */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Optional: To ensure inner content does not overflow awkwardly */
+.result-container .report .prediction-results {
+  width: 100%;
+  min-width: 300px; /* Prevents shrinking */
+}
+
+/* The right side with the report */
+.result-container .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* The report container itself */
+.report {
+  flex: 1;
+  outline: 2px solid #ccc; /* or any border style you prefer */
+  border-radius: 5px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  max-height: 500px; /* adjust as needed */
+  overflow-y: auto; /* so you can scroll if content is long */
+}
+
+/* Patient info: single column with minimal spacing */
+.patient-info p {
+  margin: 4px 0;
+}
+
+/* .prediction-results {
+  margin-top: 15px;
+}
+
+.prediction-results h3 {
+  margin-bottom: 10px;
+}
+
+.results-list p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.results-list ul {
+  margin: 5px 0 10px 20px; /* indentation for bullet points */
+/*padding: 0;
+} */
+/* General prediction results container */
+.prediction-results {
+  margin-top: 15px;
+}
+
+/* Title */
+.prediction-results h3 {
+  margin-bottom: 10px;
+}
+
+/* Styling for results table */
+.results-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Table row and cell styling */
+.results-list td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+/* Left column (labels) */
+.results-list td:first-child {
+  font-weight: bold;
+  background-color: #f8f8f8;
+  width: 30%;
+}
+
+/* Next steps list */
+.results-list ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Probability chart styling */
+.probability-chart {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 5px;
+}
+
+#download {
+  margin-top: auto;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .scan-uploader {
+    flex-direction: column;
+    min-height: fit-content;
+  }
+
+  .scan-uploader .divider {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+  }
+
+  .scan-type {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .upload-section {
+    padding: 0;
+  }
+
+  .patient-form {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-form select {
+    width: 98.2%;
+  }
+
+  .disclaimer {
+    flex-direction: column;
+    height: 510px;
+    justify-content: center;
+  }
+
+  .disclaimer svg {
+    height: 200px;
+    width: 200px;
+  }
+
+  .result-container {
+    flex-direction: column;
+  }
+
+  .result-container .left {
+    width: 100%;
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .result-container .left img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .result-container .report .patient-info {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 50px;
+  }
+
+  .result-container .patient-info p {
+    margin-bottom: 0;
+    flex: 1;
+    width: 100%;
+  }
+
+  #download {
+    gap: 2px;
+  }
+}

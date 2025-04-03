@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #d8e5e1;
+  color: black;
+  transition: background 0.3s ease, color 0.3s ease;
+  height: 50px;
+  position: relative; /* To position the divider correctly */
+}
+
+.navbar .dark {
+  display: none;
+}
+
+.dark .navbar .light {
+  display: none;
+}
+
+.dark .navbar .dark {
+  display: block;
+}
+
+.dark .navbar {
+  background-color: #02363d;
+}
+
+/* Horizontal Rule (Divider) Styling */
+.navbar-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  border-top: 3px solid #fff; /* White color divider */
+  z-index: -1; /* Ensures it stays behind the logo */
+  margin: 0;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensures logo is aligned to the left */
+  flex: 1;
+  position: relative; /* Ensures the logo stays above the divider */
+  max-width: fit-content;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar.light .nav-links li a {
+  color: black;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  right: 2%;
+  transform: translateY(-25%);
+}
+
+/* Sign Up & Sign In Buttons */
+.signup-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin-btn {
+  background: #6fcac7; /* Light turquoise */
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background: #5ab0ad;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar.light .theme-toggle {
+  color: #003840;
+}
+
+/* Light Mode */
+.light-mode {
+  background: #f5f5f5;
+  color: black;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.divide {
+  width: 100%;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+.dark .divide {
+  border-color: white;
+}
+
+.navbar-logo img {
+  cursor: pointer;
+  height: 160px;
+}
+
+@media (max-width: 767px) {
+  .navbar-logo img {
+    height: 120px;
+  }
+}
