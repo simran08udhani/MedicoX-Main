@@ -203,20 +203,20 @@ class MRIModel:
             # }
 
             result = {
-                "success": True,
-                "prediction_scores": predictions.tolist(),
+                #"success": True,
+                #"prediction_scores": predictions.tolist(),
                 "prediction_data": prediction_data,  # Formatted for easy React chart libraries
                 "predicted_class": predicted_class,
                 "confidence": confidence,
-                "image_data": f"data:image/jpeg;base64,{img_str}" if img_str else None,
+                #"image_data": f"data:image/jpeg;base64,{img_str}" if img_str else None,
                 "probability_chart": f"data:image/png;base64,{plot_str}",
                 "medical_guidance": guidance[predicted_class],
-                "recommendation": "Please consult with a neurologist to discuss these findings. This AI analysis is meant to assist, not replace professional medical advice.",
+                #"recommendation": "Please consult with a neurologist to discuss these findings. This AI analysis is meant to assist, not replace professional medical advice.",
                 "next_steps": [
                     "Schedule a consultation with a neurologist",
                     "Discuss medication options if applicable",
-                    "Consider lifestyle modifications for brain health",
-                    "Plan for regular follow-up evaluations"
+                    #"Consider lifestyle modifications for brain health",
+                    #"Plan for regular follow-up evaluations"
                 ]
             }
             
