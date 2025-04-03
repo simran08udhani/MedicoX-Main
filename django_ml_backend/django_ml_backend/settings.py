@@ -124,25 +124,17 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
-# import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-replace-this-with-secure-key-in-production'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-replace-this-with-secure-key-in-production'
 
-# # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key-if-not-set')
-# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-&ynwwfbu43rz%@cmc05=slz%ea_1&rh!ao#y2f$a&$qo8=&usk")
-DEBUG = False
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [
@@ -198,9 +190,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
-# }
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -249,7 +238,6 @@ REST_FRAMEWORK = {
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # Only for development
 CORS_ALLOWED_ORIGINS = [
-    "https://medicalimageanalysis.netlify.app", # netlify app
     "http://localhost:3000",  # For React frontend
     "http://127.0.0.1:3000",
 ]
